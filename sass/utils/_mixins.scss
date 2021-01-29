@@ -1,0 +1,27 @@
+@mixin cont($colour: $colour-background){
+    background-color: $colour;
+    width: $width-cont-mobile;
+    display: flex;
+    margin: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+@mixin btn{
+    
+}
+
+@mixin btn--discover{
+    width: 50%;
+    background: linear-gradient(to top left, $colour-primary, $colour-secondary);
+    border-radius: 30px 30px 30px 30px;
+    padding: 5px 10px 5px 10px;
+}
+
+@mixin btn--fct{
+    
+}
+
+@mixin rst-link{
+    width: $width-cont-mobile;
+}
