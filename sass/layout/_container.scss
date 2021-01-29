@@ -1,0 +1,19 @@
+.cont-fct{
+    @include cont(none);
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    &__title{
+        align-self: start;
+        padding-left: 20px;
+    }
+}
+
+.cont-rst{
+    @include cont;
+    flex-direction: column;
+    &__title{
+        align-self: start;
+        padding-left: 20px;
+    }
+}

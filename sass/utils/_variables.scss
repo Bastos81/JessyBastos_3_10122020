@@ -2,10 +2,11 @@ $colour-primary: #9356DC ;
 $colour-secondary: #FF79DA ;
 $colour-tertiary: #99E2D0;
 $colour-white: #fff;
-$colour-text-primary: 000000;
+$colour-text-primary: #000000;
 $colour-text-secondary: #fff;
 $colour-invalid: #DB464B;
 $colour-background: #f6f6f6;
+$colour-btn: linear-gradient(to top left, $colour-primary, $colour-secondary);
 
 $width-cont-mobile: 100%;
 $padding-cont: 15px;
