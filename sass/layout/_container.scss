@@ -9,9 +9,24 @@
     }
 }
 
+.cont-fct--mobile{
+    width: 100%;
+    @include cont(none);
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    @media (min-width: 1000px){
+        flex-direction: row;
+        justify-content: space-evenly;
+    }   
+}
+
 .cont-rst{
     @include cont;
     flex-direction: column;
+    @media (min-width: 1000px){
+        background: $colour-cont--degr;
+    }
     &__title{
         align-self: start;
         padding-left: 20px;
@@ -20,4 +35,13 @@
 
 .menu__cont{
     @include menu__cont
+}
+
+.menu{
+    @media (min-width: 1000px){
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
 }
