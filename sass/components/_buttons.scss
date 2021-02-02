@@ -1,7 +1,21 @@
-.header__discover__btn {
+.header__discover__btn{
     @include btn--discover;
 }
 
-.cont-fct__btn {
+.cont-fct__btn{
     @include btn--fct;
+}
+
+.menu__cont__btn{
+    @include btn--menu;
+}
+
+.menu__btn--commander{
+    @include btn--discover;
+    text-decoration: none;
+    color: $colour-text-secondary;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    padding: 0px 10px 0px 10px;
 }

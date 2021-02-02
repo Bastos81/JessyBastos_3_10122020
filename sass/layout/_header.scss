@@ -1,6 +1,5 @@
 .header{
     width: $width-cont-mobile;
-    
     &__logo{
         @include cont(none);
         & img{

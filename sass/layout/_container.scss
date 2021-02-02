@@ -17,3 +17,7 @@
         padding-left: 20px;
     }
 }
+
+.menu__cont{
+    @include menu__cont
+}

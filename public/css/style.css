@@ -31,14 +31,21 @@ h3 {
 }
 
 h4 {
-  font-weight: normal;
-  font-size: 1rem;
+  font-weight: bold;
+  font-size: 1.1rem;
 }
 
 header h3 {
   font-size: 0.9rem;
   font-weight: lighter;
   color: #fff;
+}
+
+.menu__header__title {
+  font-family: Cambria, sans-serif;
+  font-size: 1.8rem;
+  font-weight: 800;
+  font-style: italic;
 }
 
 /*# Components */
@@ -86,41 +93,107 @@ header h3 {
   color: #6a6a6a;
 }
 
+.menu__cont__btn {
+  width: 95%;
+  height: 65px;
+  background-color: #fff;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px 15px 15px 15px;
+}
+.menu__cont__btn__texte {
+  width: 100%;
+  flex-direction: column;
+  line-height: 0.2px;
+  margin-left: 15px;
+}
+.menu__cont__btn__titre {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.menu__cont__btn__description {
+  font-size: 0.8rem;
+  font-weight: lighter;
+}
+.menu__cont__btn__prix {
+  align-self: flex-end;
+  margin-right: 15px;
+}
+
+.menu__btn--commander {
+  width: 50%;
+  background: linear-gradient(to top left, #9356DC, #FF79DA);
+  border-radius: 30px 30px 30px 30px;
+  padding: 5px 10px 5px 10px;
+  margin-bottom: 25px;
+  box-shadow: 6px 6px 10px #b6b6b6;
+  text-decoration: none;
+  color: #fff;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  padding: 0px 10px 0px 10px;
+}
+.menu__btn--commander:hover {
+  box-shadow: 6px 6px 10px #9d9d9d;
+}
+
 .cont-rst__link {
   width: 100%;
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+.cont-rst__link a {
   width: 85%;
   text-decoration: none;
   color: #000000;
+  display: block;
+  position: relative;
 }
 .cont-rst__link figure {
+  margin-left: 0;
+  margin-right: 0;
   width: 100%;
-  height: 200px;
-  min-width: 250px;
+  height: 250px;
   background-color: #fff;
-  border-radius: 25px 25px 25px 25px;
+  border-radius: 25px;
 }
-.cont-rst__link figure.nouveau {
-  width: 20%;
-  top: 20%;
-  right: 10%;
-  background-color: #fff;
+.cont-rst__link figure .nouveau {
+  background-color: #99e2d0;
+  color: #1b6150;
+  padding: 0.5rem;
+  border-radius: 5px;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
 }
 .cont-rst__link img {
   width: 100%;
   height: 70%;
   object-fit: cover;
+  border-radius: 25px 25px 0px 0px;
 }
 .cont-rst__link figcaption {
   width: 100%;
-  height: 30%;
+  max-height: 60px;
   line-height: 0.5px;
   display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .cont-rst__link figcaption div {
-  display: flex;
-  flex-direction: column;
+  margin-left: 15px;
+}
+.cont-rst__link figcaption i {
+  display: block;
+  font-size: 175%;
+  font-weight: lighter;
+  justify-self: flex-end;
+  margin-right: 15px;
 }
 
 /*# Layout */
@@ -189,22 +262,16 @@ header h3 {
   padding-bottom: 30px;
   display: flex;
   flex-direction: column;
+  margin: auto;
 }
 .footer img {
   width: 125px;
   padding-left: 40px;
   filter: invert(100%);
 }
-.footer nav {
-  width: 100%;
-}
-.footer ul {
-  width: 100%;
-}
 .footer li {
   list-style-type: none;
   padding-bottom: 10px;
-  width: 100%;
 }
 .footer li a {
   text-decoration: none;
@@ -247,7 +314,75 @@ header h3 {
   padding-left: 20px;
 }
 
+.menu__cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f6f6f6;
+  margin: 0;
+  padding-top: 20px;
+}
+.menu__cont > p {
+  text-transform: uppercase;
+  margin-left: 15px;
+  align-self: flex-start;
+  border-bottom: 3px solid #99e2d0;
+  padding-bottom: 3px;
+  width: 40px;
+}
+
 /*# Pages */
+.header--rst {
+  display: flex;
+  align-items: center;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+.header--rst a {
+  font-size: 125%;
+  color: #000000;
+}
+
+.menu__header {
+  width: 100%;
+  margin-bottom: -20px;
+}
+.menu__header figure {
+  width: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+.menu__header figure figcaption {
+  z-index: 1;
+  margin-top: -20px;
+  width: 100%;
+  max-height: 120px;
+  line-height: 0.5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f6f6f6;
+  border-radius: 25px 25px 0px 0px;
+}
+.menu__header figure div {
+  width: 75%;
+  margin-left: 25px;
+  margin-top: 20px;
+}
+.menu__header figure i {
+  margin-top: 20px;
+  margin-right: 25px;
+  font-size: 175%;
+  font-weight: lighter;
+}
+.menu__header figure img {
+  z-index: 0;
+  width: 100%;
+  object-fit: cover;
+}
+
 /*# Themes */
 
 /*# sourceMappingURL=style.css.map */
