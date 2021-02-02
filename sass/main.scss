@@ -19,12 +19,13 @@
 @import "./components/map";
 
 /*# Layout */
+@import "./layout/loader";
 @import "./layout/header";
 @import "./layout/footer";
 @import "./layout/container";
 @import "./layout/form";
 
 /*# Pages */
-@import "./pages/la_palette_du_gout";
+@import "./pages/page-menu";
 
 /*# Themes */

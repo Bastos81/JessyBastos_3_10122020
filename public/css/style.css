@@ -238,6 +238,27 @@ header h3 {
 }
 
 /*# Layout */
+.loader {
+  width: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.fa-spinner {
+  font-size: 18rem;
+  position: absolute;
+  margin-top: 500px;
+  color: #FF79DA;
+}
+
+.loader .fa-utensils {
+  font-size: 5rem;
+  position: absolute;
+  margin-top: 500px;
+  color: #9356DC;
+}
+
 .header {
   width: 100%;
 }
