@@ -21,6 +21,9 @@
                 padding-right: 20px;
                 width: 8px;
             }
+            &:hover{
+            color: $colour-secondary;
+        }
         }
     }
 }

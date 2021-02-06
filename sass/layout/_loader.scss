@@ -1,6 +1,6 @@
 .loader{
     width: 100%;
-    display: none;
+    display: flex;
     justify-content: center;
     align-items: center;
 }
@@ -10,6 +10,8 @@
     position: absolute;
     margin-top: 500px;
     color: $colour-secondary;
+    opacity: 0;
+    animation: loader 1s 3 ease-in-out;
 }
 
 .loader .fa-utensils{
@@ -17,4 +19,6 @@
     position: absolute;
     margin-top: 500px;
     color: $colour-primary;
+    opacity: 0;
+    animation: loader 3s reverse ease-in-out;
 }

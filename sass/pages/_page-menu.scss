@@ -14,6 +14,32 @@
     &__header{
         width: $width-cont-mobile;
         margin-bottom: -20px;
+        &__heart{
+            font-size: 175%;
+            display: flex;
+            justify-self: flex-end;
+            margin-right: 25px;
+            cursor: pointer;
+            position: relative;
+            & i{
+                position: absolute;
+                left: -50px;
+                margin-left: 20px;
+            }
+            &:hover{
+                & .heart-solid{
+                    transform: scale(1);
+                    opacity: 1;
+                }
+            }
+            & .heart-solid{
+            color: $colour-primary;
+            transform: scale(0);
+            transform-origin: bottom;
+            transition: all 400ms ease-in-out;
+            opacity: 0;
+            }
+        }
         & figure{
             width: 100%;
             margin: 0;
@@ -35,17 +61,11 @@
                     align-self: center;
                 }
             }
-            & div{
+            .menu__header__cont-title{
                 width: 75%;
                 margin-left: 25px;
                 margin-top: 20px;
             }   
-            & i{
-                margin-top: 20px;
-                margin-right: 25px;
-                font-size: 175%;
-                font-weight: lighter;
-            }
             & img{
                 z-index: 0;
                 width: 100%;
