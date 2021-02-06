@@ -1,0 +1,22 @@
+.cont-rst__link__heart{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    cursor: pointer;
+    position: relative;
+    & i{
+        position: absolute;
+        left: -50px;
+    }
+    &:hover{
+        & .heart-solid{
+            animation: heart 400ms ease-in-out forwards;
+        }
+    }
+    & .heart-solid{
+    color: $colour-primary;
+    transform: scale(0);
+    opacity: 0;
+    }
+}
+

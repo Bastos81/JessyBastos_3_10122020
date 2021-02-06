@@ -36,19 +36,39 @@
 @mixin btn--discover{
     width: 50%;
     max-width: 300px;
+    z-index: 1;
+    position: relative;
     background: $colour-btn;
     border-radius: 30px 30px 30px 30px;
     padding: 5px 10px 5px 10px;
     margin-bottom: 25px;
     box-shadow: 6px 6px 10px darken($colour-background, 25%);
+    cursor: pointer;
     &:hover{
+        .header__discover__btn--darken{
+            opacity: 1;
+        }
+    }
+    &--darken{
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: lighten($colour-secondary, 1%);
         box-shadow: 6px 6px 10px darken($colour-background, 35%);
+        border-radius: 25px 25px 25px 25px;
+        opacity: 0;
+        z-index: -1;
+        transition: opacity 250ms;
     }
 }
 
 @mixin btn--fct{
     display: flex;
     align-items: center;
+    position: relative;
+    z-index: 1;
     width: 85%;
     max-width: 350px;
     border-radius: 25px 25px 25px 25px;
@@ -60,8 +80,23 @@
         flex-direction: row;
         margin: 10px;
     } 
-    &:hover{
+    &--darken{
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: lighten($colour-primary, 34%);
         box-shadow: 6px 6px 10px darken($colour-background, 35%);
+        border-radius: 25px 25px 25px 25px;
+        opacity: 0;
+        z-index: -1;
+        transition: opacity 250ms;
+    }
+    &:hover{
+        .cont-fct__btn--darken{
+            opacity: 1;
+        }
     }
     & span{
         display: flex;
@@ -103,6 +138,9 @@
         flex-direction: column;
         line-height: 0.2px;
         margin-left: 15px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
     }    
     &__titre{
         font-size: 0.8vmin 1.1vmax;
@@ -147,7 +185,7 @@
             min-width: 320px;
             margin: 20px;
             flex-wrap: wrap;
-        }      
+        }  
     }
     & figure{
         margin-left: 0;
@@ -156,6 +194,9 @@
         height: 250px;
         background-color: $colour-white;
         border-radius: 25px;
+        box-shadow: 6px 6px 10px darken($colour-background, 25%);
+        position: relative;
+        z-index: 1;
         & .nouveau{
         background-color: #99e2d0;
         color: #1b6150;
@@ -164,6 +205,24 @@
         position: absolute;
         top: 1rem;
         right: 1rem;
+        }
+        .cont-rst__link--darken{
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: lighten($colour-primary, 34%);
+            box-shadow: 6px 6px 10px darken($colour-background, 35%);
+            border-radius: 25px 25px 25px 25px;
+            opacity: 0;
+            z-index: -1;
+            transition: opacity 250ms;
+        }   
+        &:hover{
+            .cont-rst__link--darken{
+                opacity: 1;
+            }
         }
     }
     & img{
@@ -179,16 +238,26 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        position: relative;
         cursor: pointer;
-        & div{
+        & > div{
             margin-left: 15px;
         }   
         & i{
-            display: block;
             font-size: 175%;
-            font-weight: lighter;
             justify-self: flex-end;
             margin-right: 15px;
         }
+    }
+}
+
+@keyframes heart{
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(0.85);
+        opacity: 1;
     }
 }

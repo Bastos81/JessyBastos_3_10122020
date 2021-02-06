@@ -2,6 +2,16 @@
 /*# Variables */
 /*# Fonctions */
 /*# Mixins */
+@keyframes heart {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(0.85);
+    opacity: 1;
+  }
+}
 /*# Placeholders */
 /*# Vendors */
 /*# Base */
@@ -51,19 +61,37 @@ header h3 {
 .header__discover__btn {
   width: 50%;
   max-width: 300px;
+  z-index: 1;
+  position: relative;
   background: linear-gradient(to top left, #9356DC, #FF79DA);
   border-radius: 30px 30px 30px 30px;
   padding: 5px 10px 5px 10px;
   margin-bottom: 25px;
   box-shadow: 6px 6px 10px #b6b6b6;
+  cursor: pointer;
 }
-.header__discover__btn:hover {
+.header__discover__btn:hover .header__discover__btn--darken {
+  opacity: 1;
+}
+.header__discover__btn--darken {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #ff7edb;
   box-shadow: 6px 6px 10px #9d9d9d;
+  border-radius: 25px 25px 25px 25px;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 250ms;
 }
 
 .cont-fct__btn {
   display: flex;
   align-items: center;
+  position: relative;
+  z-index: 1;
   width: 85%;
   max-width: 350px;
   border-radius: 25px 25px 25px 25px;
@@ -78,8 +106,21 @@ header h3 {
     margin: 10px;
   }
 }
-.cont-fct__btn:hover {
+.cont-fct__btn--darken {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #efe6fa;
   box-shadow: 6px 6px 10px #9d9d9d;
+  border-radius: 25px 25px 25px 25px;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 250ms;
+}
+.cont-fct__btn:hover .cont-fct__btn--darken {
+  opacity: 1;
 }
 .cont-fct__btn span {
   display: flex;
@@ -123,6 +164,9 @@ header h3 {
   flex-direction: column;
   line-height: 0.2px;
   margin-left: 15px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .menu__cont__btn__titre {
   font-size: 0.8vmin 1.1vmax;
@@ -141,11 +185,14 @@ header h3 {
 .menu__btn--commander {
   width: 50%;
   max-width: 300px;
+  z-index: 1;
+  position: relative;
   background: linear-gradient(to top left, #9356DC, #FF79DA);
   border-radius: 30px 30px 30px 30px;
   padding: 5px 10px 5px 10px;
   margin-bottom: 25px;
   box-shadow: 6px 6px 10px #b6b6b6;
+  cursor: pointer;
   text-decoration: none;
   color: #fff;
   text-align: center;
@@ -153,8 +200,21 @@ header h3 {
   margin-bottom: 50px;
   padding: 0px 10px 0px 10px;
 }
-.menu__btn--commander:hover {
+.menu__btn--commander:hover .header__discover__btn--darken {
+  opacity: 1;
+}
+.menu__btn--commander--darken {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #ff7edb;
   box-shadow: 6px 6px 10px #9d9d9d;
+  border-radius: 25px 25px 25px 25px;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 250ms;
 }
 
 .cont-rst__link {
@@ -201,6 +261,9 @@ header h3 {
   height: 250px;
   background-color: #fff;
   border-radius: 25px;
+  box-shadow: 6px 6px 10px #b6b6b6;
+  position: relative;
+  z-index: 1;
 }
 .cont-rst__link figure .nouveau {
   background-color: #99e2d0;
@@ -210,6 +273,22 @@ header h3 {
   position: absolute;
   top: 1rem;
   right: 1rem;
+}
+.cont-rst__link figure .cont-rst__link--darken {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #efe6fa;
+  box-shadow: 6px 6px 10px #9d9d9d;
+  border-radius: 25px 25px 25px 25px;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 250ms;
+}
+.cont-rst__link figure:hover .cont-rst__link--darken {
+  opacity: 1;
 }
 .cont-rst__link img {
   width: 100%;
@@ -224,17 +303,36 @@ header h3 {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
   cursor: pointer;
 }
-.cont-rst__link figcaption div {
+.cont-rst__link figcaption > div {
   margin-left: 15px;
 }
 .cont-rst__link figcaption i {
-  display: block;
   font-size: 175%;
-  font-weight: lighter;
   justify-self: flex-end;
   margin-right: 15px;
+}
+
+.cont-rst__link__heart {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  cursor: pointer;
+  position: relative;
+}
+.cont-rst__link__heart i {
+  position: absolute;
+  left: -50px;
+}
+.cont-rst__link__heart:hover .heart-solid {
+  animation: heart 400ms ease-in-out forwards;
+}
+.cont-rst__link__heart .heart-solid {
+  color: #9356DC;
+  transform: scale(0);
+  opacity: 0;
 }
 
 /*# Layout */
