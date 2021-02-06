@@ -6,8 +6,32 @@
     @include btn--fct;
 }
 
+.cont-fct__btn--shop{
+    @include btn--fct;
+    background: lighten($colour-primary, 34%);
+    & i{
+        color: $colour-primary;    
+    }
+}
+
 .menu__cont__btn{
     @include btn--menu;
+}
+
+.btn--4{
+    @media (min-width: 1250px){
+    width: 22%;
+    min-width: 200px;
+    margin-right: 25px;
+    }
+}
+
+.btn--3{
+    @media (min-width: 1250px){
+    width: 30%;
+    min-width: 300px;
+    margin-right: 25px;
+    }
 }
 
 .menu__btn--commander{

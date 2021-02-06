@@ -86,7 +86,6 @@
         right: 0;
         bottom: 0;
         left: 0;
-        background-color: lighten($colour-primary, 34%);
         box-shadow: 6px 6px 10px darken($colour-background, 35%);
         border-radius: 25px 25px 25px 25px;
         opacity: 0;
@@ -94,9 +93,6 @@
         transition: opacity 250ms;
     }
     &:hover{
-        & i{
-            color: $colour-primary;
-        }
         .cont-fct__btn--darken{
             opacity: 1;
         }
@@ -185,11 +181,6 @@
             color: $colour-text-secondary;
             transition: transform 600ms 500ms ease-out;
         }
-    }
-    @media (min-width: 1250px){
-        width: 30%;
-        min-width: 300px;
-        margin-right: 25px;
     }
     &__texte{
         width: 100%;
