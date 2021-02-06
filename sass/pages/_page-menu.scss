@@ -26,12 +26,24 @@
                 left: -50px;
                 margin-left: 20px;
             }
-            &:hover{
-                & .heart-solid{
-                    transform: scale(1);
-                    opacity: 1;
+            @media (max-width: 480px){
+                &:active{
+                    & .heart-solid{
+                        animation: heart 400ms ease-in-out both;
+                    }
                 }
             }
+            @media (min-width: 481px){
+                &:hover{
+                    & .heart-solid{
+                        transform: scale(1);
+                        opacity: 1;
+                    }
+                }
+            }
+            & .heart-empty{
+                color: $colour-text-primary;
+                }
             & .heart-solid{
             color: $colour-primary;
             transform: scale(0);
@@ -56,6 +68,7 @@
                 justify-content: space-between;
                 background-color: $colour-background;
                 border-radius: 25px 25px 0px 0px;
+                overflow: hidden;
                 @media (min-width: 1000px){
                     width: 85%;
                     align-self: center;
@@ -65,6 +78,13 @@
                 width: 75%;
                 margin-left: 25px;
                 margin-top: 20px;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }   
+            .menu__header__title{
+                white-space: nowrap;
+                text-overflow: ellipsis;
             }   
             & img{
                 z-index: 0;

@@ -3,6 +3,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    & img{
+        position: absolute;
+        margin-top: 450px;
+        opacity: 0;
+        animation: loader-logo 3s ease-in-out;
+    }
 }
 
 .fa-spinner{

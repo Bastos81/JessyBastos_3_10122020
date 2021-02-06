@@ -94,6 +94,9 @@
         transition: opacity 250ms;
     }
     &:hover{
+        & i{
+            color: $colour-primary;
+        }
         .cont-fct__btn--darken{
             opacity: 1;
         }
@@ -116,6 +119,7 @@
         width: 25px;
         font-size: 1.2rem;
         color: darken($colour-background, 55%);
+        transition: color 1s;
     }
 }
 
@@ -197,7 +201,6 @@
         text-overflow: ellipsis;
     }    
     &__titre{
-        font-size: 0.8vmin 1.1vmax;
         font-weight: bold;
         overflow: hidden;
         white-space: nowrap;

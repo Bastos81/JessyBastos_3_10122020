@@ -2,6 +2,16 @@
 /*# Variables */
 /*# Fonctions */
 /*# Mixins */
+@keyframes heart {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
 @keyframes menu {
   0% {
     transform: translateY(50px);
@@ -25,6 +35,17 @@
   }
   100% {
     transform: rotate(360deg);
+    opacity: 0;
+  }
+}
+@keyframes loader-logo {
+  0% {
+    opacity: 1;
+  }
+  95% {
+    opacity: 1;
+  }
+  100% {
     opacity: 0;
   }
 }
@@ -147,6 +168,9 @@ header h3 {
   z-index: -1;
   transition: opacity 250ms;
 }
+.cont-fct__btn:hover i {
+  color: #9356DC;
+}
 .cont-fct__btn:hover .cont-fct__btn--darken {
   opacity: 1;
 }
@@ -168,6 +192,7 @@ header h3 {
   width: 25px;
   font-size: 1.2rem;
   color: #6a6a6a;
+  transition: color 1s;
 }
 
 .menu__cont__btn {
@@ -249,7 +274,6 @@ header h3 {
   text-overflow: ellipsis;
 }
 .menu__cont__btn__titre {
-  font-size: 0.8vmin 1.1vmax;
   font-weight: bold;
   overflow: hidden;
   white-space: nowrap;
@@ -451,6 +475,12 @@ header h3 {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.loader img {
+  position: absolute;
+  margin-top: 450px;
+  opacity: 0;
+  animation: loader-logo 3s ease-in-out;
 }
 
 .fa-spinner {
@@ -696,9 +726,19 @@ header h3 {
   left: -50px;
   margin-left: 20px;
 }
-.menu__header__heart:hover .heart-solid {
-  transform: scale(1);
-  opacity: 1;
+@media (max-width: 480px) {
+  .menu__header__heart:active .heart-solid {
+    animation: heart 400ms ease-in-out both;
+  }
+}
+@media (min-width: 481px) {
+  .menu__header__heart:hover .heart-solid {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.menu__header__heart .heart-empty {
+  color: #000000;
 }
 .menu__header__heart .heart-solid {
   color: #9356DC;
@@ -724,6 +764,7 @@ header h3 {
   justify-content: space-between;
   background-color: #f6f6f6;
   border-radius: 25px 25px 0px 0px;
+  overflow: hidden;
 }
 @media (min-width: 1000px) {
   .menu__header figure figcaption {
@@ -735,6 +776,13 @@ header h3 {
   width: 75%;
   margin-left: 25px;
   margin-top: 20px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.menu__header figure .menu__header__title {
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .menu__header figure img {
   z-index: 0;
