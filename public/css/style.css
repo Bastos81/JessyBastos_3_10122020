@@ -28,6 +28,9 @@
 @keyframes loader {
   0% {
     transform: rotate(0deg);
+    opacity: 0;
+  }
+  25% {
     opacity: 0.7;
   }
   75% {
@@ -124,7 +127,11 @@ header h3 {
   padding: 5px 10px 5px 10px;
   margin-bottom: 25px;
   box-shadow: 6px 6px 10px #b6b6b6;
+  transition: opacity 250ms ease-in-out;
   cursor: pointer;
+}
+.header__discover__btn:hover {
+  opacity: 0.9;
 }
 .header__discover__btn:hover .header__discover__btn--darken {
   opacity: 1;
@@ -135,9 +142,8 @@ header h3 {
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: #ff7edb;
   box-shadow: 6px 6px 10px #9d9d9d;
-  border-radius: 25px 25px 25px 25px;
+  border-radius: 30px 30px 30px 30px;
   opacity: 0;
   z-index: -1;
   transition: opacity 250ms;
@@ -154,6 +160,7 @@ header h3 {
   background-color: #f6f6f6;
   margin-bottom: 20px;
   box-shadow: 6px 6px 10px #b6b6b6;
+  transition: opacity 250ms ease-in-out;
   cursor: pointer;
 }
 @media (min-width: 1000px) {
@@ -173,6 +180,9 @@ header h3 {
   opacity: 0;
   z-index: -1;
   transition: opacity 250ms;
+}
+.cont-fct__btn:hover {
+  opacity: 0.8;
 }
 .cont-fct__btn:hover .cont-fct__btn--darken {
   opacity: 1;
@@ -209,6 +219,7 @@ header h3 {
   background-color: #f6f6f6;
   margin-bottom: 20px;
   box-shadow: 6px 6px 10px #b6b6b6;
+  transition: opacity 250ms ease-in-out;
   cursor: pointer;
   background: #efe6fa;
 }
@@ -229,6 +240,9 @@ header h3 {
   opacity: 0;
   z-index: -1;
   transition: opacity 250ms;
+}
+.cont-fct__btn--shop:hover {
+  opacity: 0.8;
 }
 .cont-fct__btn--shop:hover .cont-fct__btn--darken {
   opacity: 1;
@@ -375,6 +389,7 @@ header h3 {
   padding: 5px 10px 5px 10px;
   margin-bottom: 25px;
   box-shadow: 6px 6px 10px #b6b6b6;
+  transition: opacity 250ms ease-in-out;
   cursor: pointer;
   text-decoration: none;
   color: #fff;
@@ -382,6 +397,9 @@ header h3 {
   margin-top: 30px;
   margin-bottom: 50px;
   padding: 0px 10px 0px 10px;
+}
+.menu__btn--commander:hover {
+  opacity: 0.9;
 }
 .menu__btn--commander:hover .header__discover__btn--darken {
   opacity: 1;
@@ -392,9 +410,8 @@ header h3 {
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: #ff7edb;
   box-shadow: 6px 6px 10px #9d9d9d;
-  border-radius: 25px 25px 25px 25px;
+  border-radius: 30px 30px 30px 30px;
   opacity: 0;
   z-index: -1;
   transition: opacity 250ms;
@@ -451,6 +468,7 @@ header h3 {
   box-shadow: 6px 6px 10px #b6b6b6;
   position: relative;
   z-index: 1;
+  transition: opacity 250ms ease-in-out;
 }
 .cont-rst__link figure .nouveau {
   background-color: #99e2d0;
@@ -471,6 +489,9 @@ header h3 {
   opacity: 0;
   z-index: -1;
   transition: opacity 250ms;
+}
+.cont-rst__link figure:hover {
+  opacity: 0.9;
 }
 .cont-rst__link figure:hover .cont-rst__link--darken {
   opacity: 1;
@@ -573,9 +594,6 @@ header h3 {
 .fa-spinner {
   font-size: 30rem;
   position: absolute;
-  color: #FF79DA;
-  opacity: 0;
-  animation: loader 1s 3 ease-in-out;
 }
 @media (max-width: 480px) {
   .fa-spinner {
@@ -586,6 +604,24 @@ header h3 {
   .fa-spinner {
     font-size: 22rem;
   }
+}
+
+.spinner--1 {
+  color: #9356DC;
+  opacity: 0;
+  animation: loader 1s ease-in-out;
+}
+
+.spinner--2 {
+  color: #FF79DA;
+  opacity: 0;
+  animation: loader 1s 1s ease-in-out reverse;
+}
+
+.spinner--3 {
+  color: #99E2D0;
+  opacity: 0;
+  animation: loader 1s 2s ease-in-out;
 }
 
 .header {

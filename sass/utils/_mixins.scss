@@ -43,8 +43,10 @@
     padding: 5px 10px 5px 10px;
     margin-bottom: 25px;
     box-shadow: 6px 6px 10px darken($colour-background, 25%);
+    transition: opacity 250ms ease-in-out;
     cursor: pointer;
     &:hover{
+        opacity: 0.9;
         .header__discover__btn--darken{
             opacity: 1;
         }
@@ -55,9 +57,8 @@
         right: 0;
         bottom: 0;
         left: 0;
-        background-color: lighten($colour-secondary, 1%);
         box-shadow: 6px 6px 10px darken($colour-background, 35%);
-        border-radius: 25px 25px 25px 25px;
+        border-radius: 30px 30px 30px 30px;
         opacity: 0;
         z-index: -1;
         transition: opacity 250ms;
@@ -75,6 +76,7 @@
     background-color: $colour-background;
     margin-bottom: 20px;
     box-shadow: 6px 6px 10px darken($colour-background, 25%);
+    transition: opacity 250ms ease-in-out;
     cursor: pointer;
     @media (min-width: 1000px){
         flex-direction: row;
@@ -93,6 +95,7 @@
         transition: opacity 250ms;
     }
     &:hover{
+        opacity: 0.8;
         .cont-fct__btn--darken{
             opacity: 1;
         }
@@ -253,6 +256,7 @@
         box-shadow: 6px 6px 10px darken($colour-background, 25%);
         position: relative;
         z-index: 1;
+        transition: opacity 250ms ease-in-out;
         & .nouveau{
         background-color: #99e2d0;
         color: #1b6150;
@@ -274,6 +278,7 @@
             transition: opacity 250ms;
         }   
         &:hover{
+            opacity: 0.9;
             .cont-rst__link--darken{
                 opacity: 1;
             }
