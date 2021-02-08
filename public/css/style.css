@@ -28,10 +28,10 @@
 @keyframes loader {
   0% {
     transform: rotate(0deg);
-    opacity: 1;
+    opacity: 0.7;
   }
   75% {
-    opacity: 1;
+    opacity: 0.7;
   }
   100% {
     transform: rotate(360deg);
@@ -40,12 +40,19 @@
 }
 @keyframes loader-logo {
   0% {
-    opacity: 1;
+    transform: rotate(0deg);
+    opacity: 0.7;
   }
-  95% {
-    opacity: 1;
+  25% {
+    opacity: 0.7;
+    transform: rotate(0deg);
+  }
+  75% {
+    opacity: 0.7;
+    transform: rotate(360deg);
   }
   100% {
+    transform: rotate(360deg);
     opacity: 0;
   }
 }
@@ -539,30 +546,46 @@ header h3 {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 400px;
+  position: absolute;
+}
+@media (max-width: 1000px) {
+  .loader {
+    margin-top: 200px;
+  }
 }
 .loader img {
   position: absolute;
-  margin-top: 450px;
   opacity: 0;
-  animation: loader-logo 3s ease-in-out;
+  animation: loader-logo 3s reverse ease-in-out backwards;
+}
+@media (max-width: 480px) {
+  .loader img {
+    width: 100px;
+  }
+}
+@media (min-width: 481px) and (max-width: 1000px) {
+  .loader img {
+    width: 125px;
+  }
 }
 
 .fa-spinner {
-  font-size: 18rem;
+  font-size: 30rem;
   position: absolute;
-  margin-top: 500px;
   color: #FF79DA;
   opacity: 0;
   animation: loader 1s 3 ease-in-out;
 }
-
-.loader .fa-utensils {
-  font-size: 5rem;
-  position: absolute;
-  margin-top: 500px;
-  color: #9356DC;
-  opacity: 0;
-  animation: loader 3s reverse ease-in-out;
+@media (max-width: 480px) {
+  .fa-spinner {
+    font-size: 15rem;
+  }
+}
+@media (min-width: 481px) and (max-width: 1000px) {
+  .fa-spinner {
+    font-size: 22rem;
+  }
 }
 
 .header {

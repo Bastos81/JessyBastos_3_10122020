@@ -26,10 +26,10 @@
 @keyframes loader{
     0%{
         transform: rotate(0deg);
-        opacity: 1;
+        opacity: 0.7;
     }
     75%{
-        opacity: 1;
+        opacity: 0.7;
     }
     100%{
         transform: rotate(360deg);
@@ -39,12 +39,19 @@
 
 @keyframes loader-logo{
     0%{
-        opacity: 1;
+        transform: rotate(0deg);
+        opacity: 0.7;
     }
-    95%{
-        opacity: 1;
+    25%{
+        opacity: 0.7;
+        transform: rotate(0deg);
+    }
+    75%{
+        opacity: 0.7;
+        transform: rotate(360deg);
     }
     100%{
+        transform: rotate(360deg);
         opacity: 0;
     }
 }

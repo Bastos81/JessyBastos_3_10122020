@@ -3,28 +3,34 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 400px;
+    position: absolute;
+    @media (max-width: 1000px){
+        margin-top: 200px;
+    } 
     & img{
         position: absolute;
-        margin-top: 450px;
         opacity: 0;
-        animation: loader-logo 3s ease-in-out;
+        animation: loader-logo 3s reverse ease-in-out backwards;
+        @media (max-width: 480px){
+            width: 100px;
+        } 
+        @media (min-width: 481px) and (max-width: 1000px){
+            width: 125px;
+        }
     }
 }
 
 .fa-spinner{
-    font-size: 18rem;
+    font-size: 30rem;
     position: absolute;
-    margin-top: 500px;
     color: $colour-secondary;
     opacity: 0;
     animation: loader 1s 3 ease-in-out;
-}
-
-.loader .fa-utensils{
-    font-size: 5rem;
-    position: absolute;
-    margin-top: 500px;
-    color: $colour-primary;
-    opacity: 0;
-    animation: loader 3s reverse ease-in-out;
+    @media (max-width: 480px){
+        font-size: 15rem;
+    } 
+    @media (min-width: 481px) and (max-width: 1000px){
+        font-size: 22rem;
+    }
 }
