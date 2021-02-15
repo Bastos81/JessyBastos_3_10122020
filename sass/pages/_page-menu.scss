@@ -26,30 +26,28 @@
                 left: -50px;
                 margin-left: 20px;
             }
-            @media (max-width: 480px){
-                &:active{
-                    & .heart-solid{
-                        animation: heart 400ms ease-in-out both;
-                    }
+            &:hover{
+                & .heart-solid{
+                    transform: scale(1);
+                    opacity: 1;
+                }
+                & .heart-empty{
+                    
+                    opacity: 0;
                 }
             }
-            @media (min-width: 481px){
-                &:hover{
-                    & .heart-solid{
-                        transform: scale(1);
-                        opacity: 1;
-                    }
-                }
+            & .heart-solid{
+                background: -webkit-gradient(linear, left top, left bottom, from($colour-primary), to($colour-secondary));
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                transform: scale(0);
+                transition: all 400ms ease-in-out;
+                opacity: 0;
             }
             & .heart-empty{
                 color: $colour-text-primary;
-                }
-            & .heart-solid{
-            color: $colour-primary;
-            transform: scale(0);
-            transform-origin: bottom;
-            transition: all 400ms ease-in-out;
-            opacity: 0;
+                opacity: 1;
+                transition: all 400ms 150ms ease-in-out;
             }
         }
         & figure{

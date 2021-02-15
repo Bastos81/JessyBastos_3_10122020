@@ -13,13 +13,21 @@
             transform: scale(1);
             opacity: 1;
         }
+        & .heart-empty{
+            opacity: 0;
+        }
     }
     & .heart-solid{
-    color: $colour-primary;
-    transform: scale(0);
-    transform-origin: bottom;
-    transition: all 400ms ease-in-out;
-    opacity: 0;
+        background: -webkit-gradient(linear, left top, left bottom, from($colour-primary), to($colour-secondary));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transform: scale(0);
+        transition: all 400ms ease-in-out;
+        opacity: 0;
+    }
+    & .heart-empty{
+        opacity: 1;
+        transition: all 400ms 150ms ease-in-out;
     }
 }
 

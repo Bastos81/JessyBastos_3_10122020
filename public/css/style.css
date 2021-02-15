@@ -539,12 +539,20 @@ header h3 {
   transform: scale(1);
   opacity: 1;
 }
+.cont-rst__link__heart:hover .heart-empty {
+  opacity: 0;
+}
 .cont-rst__link__heart .heart-solid {
-  color: #9356DC;
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   transform: scale(0);
-  transform-origin: bottom;
   transition: all 400ms ease-in-out;
   opacity: 0;
+}
+.cont-rst__link__heart .heart-empty {
+  opacity: 1;
+  transition: all 400ms 150ms ease-in-out;
 }
 
 .menu__cont {
@@ -852,26 +860,25 @@ header h3 {
   left: -50px;
   margin-left: 20px;
 }
-@media (max-width: 480px) {
-  .menu__header__heart:active .heart-solid {
-    animation: heart 400ms ease-in-out both;
-  }
+.menu__header__heart:hover .heart-solid {
+  transform: scale(1);
+  opacity: 1;
 }
-@media (min-width: 481px) {
-  .menu__header__heart:hover .heart-solid {
-    transform: scale(1);
-    opacity: 1;
-  }
+.menu__header__heart:hover .heart-empty {
+  opacity: 0;
+}
+.menu__header__heart .heart-solid {
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform: scale(0);
+  transition: all 400ms ease-in-out;
+  opacity: 0;
 }
 .menu__header__heart .heart-empty {
   color: #000000;
-}
-.menu__header__heart .heart-solid {
-  color: #9356DC;
-  transform: scale(0);
-  transform-origin: bottom;
-  transition: all 400ms ease-in-out;
-  opacity: 0;
+  opacity: 1;
+  transition: all 400ms 150ms ease-in-out;
 }
 .menu__header figure {
   width: 100%;
